@@ -12,5 +12,11 @@ class MembersController extends Controller
     
         return view('members', ['data' => $users]);
     }
+    public function searchMembers(Request $request) {
+        $query = $request->input('query');
+        $results = Registr::where('name', 'like', '%'.$query.'%')->get();
+        return response()->json($results);
+    }
+    
     
 }

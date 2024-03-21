@@ -1,8 +1,5 @@
 <header>
     <div class="bar">
-        <div class="logo">
-            <img src="https://imgur.com/QlFPhrT.png" alt="">
-        </div>
         <div class="nav-text">
             <a href=""><li>Функции</li></a>
             <a href=""><li>Приложение для ПК</li></a>

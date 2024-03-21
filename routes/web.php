@@ -44,7 +44,12 @@ Route::post('/login/submit', 'LoginController@login')->name('log-form');
 Route::post('/main/CreatePost.php', 'PostController@CreatePost')->name('CreatePost');
 
 Route::post('inbox/SendMessages/{id_user}', 'InboxController@send')->name('SendMessages');
+
 Route::get('inbox', 'InboxController@ShowAllMessages')->name('inbox');
 //Route::get('inbox', 'InboxController@ShowAllReceivedMessages')->name('inbox');
 Route::get('/get-messages/{userId}', 'InboxController@getMessages')->name('get-messages');
+//Route::get('/search/users', 'MembersController@search')->name('search_users');
+Route::get('/search/members', 'MembersController@searchMembers')->name('searchMembers');
+
+
 

@@ -2,7 +2,7 @@
  body {
                 font-family: Arial, sans-serif;
                 padding: 0px 0px;
-                background: #f8f8f8;
+                background: #1d1f2b;
             }
 
             .header {
@@ -10,7 +10,8 @@
                 justify-content: space-between;
                 align-items: center;
                 padding: 20px;
-                background-color: white;
+                background-color: #1d1f2b;
+                border-bottom: gray 1px solid;
                 box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
             }
 
@@ -65,7 +66,7 @@
 
             .menu a {
                 font-family: 'Montserrat', sans-serif;
-                color: black;
+                color: white;
                 font-weight: 800;
                 text-transform: capitalize;
                 font-size: 15px;
@@ -75,14 +76,13 @@
 
             .sidebar {
                 display: flex;
-                
                 flex-direction: column;
                 position: fixed;
                 top: 0;
                 left: 0;
                 height: 100%;
                 width: 69px;
-                background-color: white;
+                background-color: #6785fe;
                 padding: 30px 24px;
                 box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
                 
@@ -136,10 +136,10 @@
 
 
 
-<div class="header">
+{{-- <div class="header">
     <div class="logo">
       <img src="https://imgur.com/QlFPhrT.png" alt="Logo">
-      <input class="search" type="text" placeholder="Search community">
+      
     </div>
     <div class="vlc">
       <div class="menu">
@@ -188,9 +188,9 @@
           <span style="color: #7d8597;" class="material-symbols-outlined">local_mall</span>
       </div>
     </div>
-  </div>
+  </div> --}}
 
-  <div class="sidebar">
+  {{-- <div class="sidebar">
     <div class="svg">
         <a href=""><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path opacity="0.12" fill-rule="evenodd" clip-rule="evenodd" d="M2 5.2C2 4.0799 2 3.51984 2.21799 3.09202C2.40973 2.71569 2.71569 2.40973 3.09202 2.21799C3.51984 2 4.0799 2 5.2 2H6.8C7.9201 2 8.48016 2 8.90798 2.21799C9.28431 2.40973 9.59027 2.71569 9.78201 3.09202C10 3.51984 10 4.0799 10 5.2V6.8C10 7.9201 10 8.48016 9.78201 8.90798C9.59027 9.28431 9.28431 9.59027 8.90798 9.78201C8.48016 10 7.9201 10 6.8 10H5.2C4.0799 10 3.51984 10 3.09202 9.78201C2.71569 9.59027 2.40973 9.28431 2.21799 8.90798C2 8.48016 2 7.9201 2 6.8V5.2ZM2 17.2C2 16.0799 2 15.5198 2.21799 15.092C2.40973 14.7157 2.71569 14.4097 3.09202 14.218C3.51984 14 4.0799 14 5.2 14H6.8C7.9201 14 8.48016 14 8.90798 14.218C9.28431 14.4097 9.59027 14.7157 9.78201 15.092C10 15.5198 10 16.0799 10 17.2V18.8C10 19.9201 10 20.4802 9.78201 20.908C9.59027 21.2843 9.28431 21.5903 8.90798 21.782C8.48016 22 7.9201 22 6.8 22H5.2C4.0799 22 3.51984 22 3.09202 21.782C2.71569 21.5903 2.40973 21.2843 2.21799 20.908C2 20.4802 2 19.9201 2 18.8V17.2ZM14.218 15.092C14 15.5198 14 16.0799 14 17.2V18.8C14 19.9201 14 20.4802 14.218 20.908C14.4097 21.2843 14.7157 21.5903 15.092 21.782C15.5198 22 16.0799 22 17.2 22H18.8C19.9201 22 20.4802 22 20.908 21.782C21.2843 21.5903 21.5903 21.2843 21.782 20.908C22 20.4802 22 19.9201 22 18.8V17.2C22 16.0799 22 15.5198 21.782 15.092C21.5903 14.7157 21.2843 14.4097 20.908 14.218C20.4802 14 19.9201 14 18.8 14H17.2C16.0799 14 15.5198 14 15.092 14.218C14.7157 14.4097 14.4097 14.7157 14.218 15.092Z" fill="#22272F"/>
@@ -244,7 +244,7 @@
         </svg></a>
         <span id= "myText9" class="side-info" >Log Out</span>
     </div>
-</div>
+</div> --}}
 <script>
 $(document).ready(function () {
     $("#myphoto, #loggedin-user-links").hover(

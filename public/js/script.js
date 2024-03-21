@@ -46,7 +46,6 @@ addVisibleWithDelay(myElement8, myText8, 50, '83%');
 var myElement9 = document.getElementById('myElement9');
 var myText9 = document.getElementById('myText9');
 addVisibleWithDelay(myElement9, myText9, 50, '92%');
-var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 btn.onclick = function () {
   modal.style.display = "block";
@@ -81,6 +80,41 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 document.getElementById('th-bp-whats-new').addEventListener('input', function () {
   document.getElementById('messagePost').value = this.innerHTML;
+});
+document.addEventListener('DOMContentLoaded', function () {
+  var modal = document.getElementById("myModal");
+  var openButtons = document.querySelectorAll(".button-messages");
+  var closeBtn = document.querySelector(".close");
+  openButtons.forEach(function (openBtn) {
+    openBtn.addEventListener('click', function () {
+      var userId = openBtn.getAttribute('data-modal-id');
+      document.getElementById('myForm').action = "http://mess/inbox/SendMessages/" + userId;
+      modal.style.display = "block";
+    });
+  });
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+  var divElement = document.getElementById('th-bp-whats-new');
+  divElement.innerText = divElement.getAttribute('data-placeholder');
+  divElement.addEventListener('focus', function () {
+    if (divElement.innerText === divElement.getAttribute('data-placeholder')) {
+      divElement.innerText = '';
+    }
+  });
+  divElement.addEventListener('blur', function () {
+    if (divElement.innerText === '') {
+      divElement.innerText = divElement.getAttribute('data-placeholder');
+    }
+  });
+  divElement.addEventListener('input', function () {
+    document.getElementById('messagePrivate').value = this.innerHTML;
+  });
 });
 /******/ })()
 ;

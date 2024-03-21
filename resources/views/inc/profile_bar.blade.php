@@ -29,20 +29,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-inner-bar">   
-                    <div class="bar-menu-profile">
-                        <a href="{{ route('profile', ['id' => $user_me['id']]) }}"> <span class="{{ Route::currentRouteName() === 'profile' ? 'active' : '' }}">Activity</span></a>
-                        <a href=""><span class="{{ Route::currentRouteName() === 'main' ? 'active' : '' }}">Friends</span></a>
-                        <a href=""><span class="{{ Route::currentRouteName() === 'main' ? 'active' : '' }}">Photos</span></a>
-                        <a href=""><span class="{{ Route::currentRouteName() === 'inbox' ? 'active' : '' }}">Messages</span></a>
-                        <a href=""><span class="{{ Route::currentRouteName() === 'main' ? 'active' : '' }}">Groups</span></a>
-                        <a href=""><span class="{{ Route::currentRouteName() === 'main' ? 'active' : '' }}">Profile</span></a>
-                        <a href=""><span class="{{ Route::currentRouteName() === 'main' ? 'active' : '' }}">Inviations</span></a>
-                        <a href=""><span class="{{ Route::currentRouteName() === 'main' ? 'active' : '' }}">Forums</span></a>
-                        <a href="{{ route('settings') }}"><span class="{{ Route::currentRouteName() === 'settings' ? 'active' : '' }}">Settings</span></a>
-                        <a href=""><span class="{{ Route::currentRouteName() === 'main' ? 'active' : '' }}">Point</span></a>
-                    </div>
-                </div>
             </div>  
             
         </div>

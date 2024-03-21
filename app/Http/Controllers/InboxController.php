@@ -21,6 +21,7 @@ class InboxController extends Controller
         $private_messages->receiver_id_image = $receiver_info['id_image'];
         $private_messages->message = $request->input('messagePrivate');
         
+
         $private_messages->save();
 
         return redirect()->route('inbox');
@@ -81,14 +82,12 @@ class InboxController extends Controller
                 $query->where('sender_id', $userId)
                     ->where('receiver_id', $user_info['id']);
             })
-            ->orderBy('created_at', 'asc') // Предполагается, что 'created_at' - это ваш столбец с временем
+            ->orderBy('created_at', 'asc') 
             ->get();
     
         $other_user = Registr::find($userId);
-    
         return Response::json(['messages' => $messages, 'other_user' => $other_user]);
     }
-    
     
 
 }

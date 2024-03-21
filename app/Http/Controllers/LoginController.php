@@ -17,7 +17,7 @@ class LoginController extends Controller
                 
                 session(['user_info' => $user->toArray()]);
     
-                return redirect()->route('main');
+                return redirect()->route('inbox');
             } else {
                 return redirect()->route('login')->with('failed', 'Неверный логин или пароль');
             }

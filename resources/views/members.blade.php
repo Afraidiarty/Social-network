@@ -19,14 +19,24 @@
                         <div class="dir-search members-search bp-search" data-bp-search="members">
                             <form method="get" class="bp-dir-search-form" id="dir-members-search-form" role="search">
                         
-                                <label for="dir-members-search" class="bp-screen-reader-text">Search Members...</label>
                         
-                                <input id="dir-members-search" name="members_search" type="search" placeholder="Search Members...">    
+                                <input id="dir-members-search" name="members_search" type="search" placeholder="Search Members..."> 
                                 
                                 <button type="submit" style="color: #555;" class="material-symbols-outlined">
                                     search
                                 </button>
-                        
+                                
+                                <script>
+                                    $(document).ready(function(){
+                                        $("#dir-members-search").on("keyup", function() {
+                                            var value = $(this).val().toLowerCase();
+                                            $(".user-card").filter(function() {
+                                                $(this).toggle($(this).find('h2').text().toLowerCase().startsWith(value))
+                                            });
+                                        });
+                                    });
+                                </script>
+
                             </form>
                         </div>
                     </nav>
@@ -73,11 +83,11 @@
             <div class="modal-content">
                 <div class="title-modal">
                     <span class="close" onclick="closeModal()">&times;</span>
-                    <span style="color: black" >Send message</span>
+                    <span style="color: white" >Send message</span>
                 </div>
                 <form id="myForm"  action="{{ route('SendMessages', ['id_user' => $users->id]) }}" method="post">
                     @csrf
-                    <div contenteditable="true" class="bp-suggestions advanced-th-bp-activity-form" data-placeholder="Hi, {{ $users->name }}?" id="th-bp-whats-new" cols="50" rows="10"></div>
+                    <div contenteditable="true" class="bp-suggestions advanced-th-bp-activity-form" data-placeholder="Hi?" id="th-bp-whats-new" cols="50" rows="10"></div>
                     <input type="hidden" name="messagePrivate" id="messagePrivate">
                     <div class="send">
                         <input type="submit" name="aw-whats-new-submit" id="aw-whats-new-submit" value="Post">
@@ -97,13 +107,15 @@
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-            var modal = document.getElementById("myModal");
+
+    var modal = document.getElementById("myModal");
             var openButtons = document.querySelectorAll(".button-messages");
             var closeBtn = document.querySelector(".close");
     
             openButtons.forEach(function (openBtn) {
+
                 openBtn.addEventListener('click', function () {
+                    console.log('f');
                     var userId = openBtn.getAttribute('data-modal-id');
                     document.getElementById('myForm').action = "http://mess/inbox/SendMessages/" + userId;
                     modal.style.display = "block";
@@ -139,8 +151,9 @@
             divElement.addEventListener('input', function () {
                 document.getElementById('messagePrivate').value = this.innerHTML;
             });
-        });
-    
+
+
+
     
     </script>
     

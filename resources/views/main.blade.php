@@ -8,9 +8,38 @@
 
 @section('content')
     <div class="main-c">
-        <section>
-            <h2>Блог</h2>
-            <!-- Список блогов -->
+        <section class="friends-sect">
+            <h2>Friends</h2>
+            <div class="container-friends">
+                <div class="friends">
+                    <div class="photo-profle"><img src="https://demo.tophivetheme.com/metafans/classic/wp-content/uploads/sites/10/avatars/16/1707967883-bpfull.jpg" alt=""></div>
+                </div>
+                <div class="friends">
+                    <div class="photo-profle"><img src="https://demo.tophivetheme.com/metafans/classic/wp-content/uploads/sites/10/avatars/16/1707967883-bpfull.jpg" alt=""></div>
+                </div>
+                <div class="friends">
+                    <div class="photo-profle"><img src="https://demo.tophivetheme.com/metafans/classic/wp-content/uploads/sites/10/avatars/16/1707967883-bpfull.jpg" alt=""></div>
+                </div>
+                <div class="friends">
+                    <div class="photo-profle"><img src="https://demo.tophivetheme.com/metafans/classic/wp-content/uploads/sites/10/avatars/16/1707967883-bpfull.jpg" alt=""></div>
+                </div>
+                <div class="friends">
+                    <div class="photo-profle"><img src="https://demo.tophivetheme.com/metafans/classic/wp-content/uploads/sites/10/avatars/16/1707967883-bpfull.jpg" alt=""></div>
+                </div>
+                <div class="friends">
+                    <div class="photo-profle"><img src="https://demo.tophivetheme.com/metafans/classic/wp-content/uploads/sites/10/avatars/16/1707967883-bpfull.jpg" alt=""></div>
+                </div>
+                <div class="friends">
+                    <div class="photo-profle"><img src="https://demo.tophivetheme.com/metafans/classic/wp-content/uploads/sites/10/avatars/16/1707967883-bpfull.jpg" alt=""></div>
+                </div>
+                <div class="friends">
+                    <div class="photo-profle"><img src="https://demo.tophivetheme.com/metafans/classic/wp-content/uploads/sites/10/avatars/16/1707967883-bpfull.jpg" alt=""></div>
+                </div>
+                <div class="friends">
+                    <div class="photo-profle"><img src="https://demo.tophivetheme.com/metafans/classic/wp-content/uploads/sites/10/avatars/16/1707967883-bpfull.jpg" alt=""></div>
+                </div>
+                
+            </div>
           </section>
 
           <section id="myBtn" style="display: flex; height: 63px; width: 600px;cursor: pointer;">

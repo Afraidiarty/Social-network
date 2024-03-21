@@ -14,7 +14,7 @@
             <br><br>
             <a href="/forgot-password" class="forgot" style="color: #848fa3;   font-family: Qanelas-Soft,sans-serif;" >Забыли пароль?</a>
             <br><br>
-            <input type="submit" value="Зарегестрироваться">
+            <input type="submit" value="Войти">
         </form>
 
         <message>
